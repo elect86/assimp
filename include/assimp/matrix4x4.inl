@@ -625,9 +625,9 @@ inline aiMatrix4x4t<TReal>& aiMatrix4x4t<TReal>::Rotation( TReal a, const aiVect
   TReal x = axis.x, y = axis.y, z = axis.z;
 
   // Many thanks to MathWorld and Wikipedia
-  out.a1 = t*x*x + c;   out.a2 = t*x*y - s*z; out.a3 = t*x*z + s*y;
-  out.b1 = t*x*y + s*z; out.b2 = t*y*y + c;   out.b3 = t*y*z - s*x;
-  out.c1 = t*x*z - s*y; out.c2 = t*y*z + s*x; out.c3 = t*z*z + c;
+  out.a1 = t*x*x + c;   out.b1 = t*x*y - s*z; out.c1 = t*x*z + s*y;
+  out.a2 = t*x*y + s*z; out.b2 = t*y*y + c;   out.c2 = t*y*z - s*x;
+  out.a3 = t*x*z - s*y; out.b3 = t*y*z + s*x; out.c3 = t*z*z + c;
   out.a4 = out.b4 = out.c4 = static_cast<TReal>(0.0);
   out.d1 = out.d2 = out.d3 = static_cast<TReal>(0.0);
   out.d4 = static_cast<TReal>(1.0);
